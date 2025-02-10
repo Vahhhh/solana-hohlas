@@ -48,7 +48,7 @@ mkdir -p /mnt/accounts /mnt/ledger /mnt/snapshots /var/log/dancer /root/solana
 # chown -R root:root /mnt /var/log/dancer
 chmod -R u=rwx,g=rwx /mnt /var/log/dancer /root/solana
 curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/firedancer/dance_config.toml > /root/solana/dance_config.toml
-curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/firedancer/dancer.service > /root/solana/dancer.service
+curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/firedancer/dancer.service > /root/solana/dancer.service
 ln -sf /root/solana/dancer.service /etc/systemd/system
 systemctl daemon-reload
 

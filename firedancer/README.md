@@ -20,8 +20,6 @@ curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/firedancer/danc
 curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/firedancer/dancer.service > /root/solana/dancer.service
 ln -sf /root/solana/dancer.service /etc/systemd/system
 systemctl daemon-reload
-systemctl enable dancer.service
-systemctl disable solana.service
 # LogRotate #
 curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/firedancer/dancer.logrotate > /etc/logrotate.d/dancer.logrotate
 systemctl restart logrotate
@@ -51,6 +49,9 @@ chmod -R u=rwx,g=rwx /root /root/solana /mnt
 chmod 600 /root/solana/vote-account-keypair.json /root/solana/validator-keypair.json
 ```
 ```bash
+systemctl enable dancer.service
+systemctl stop solana.service
+
 systemctl restart dancer
 journalctl -u dancer -f
 ```

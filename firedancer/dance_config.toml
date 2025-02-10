@@ -18,7 +18,7 @@ dynamic_port_range = "8004-8020"
         "9QxCLckBiJc783jnMvXZubK4wH86Eqqvashtrwvcsgkv",
     ]
 	identity_path = "/root/solana/validator-keypair.json"
-	vote_account_path = "/root/solana/vote.json"
+	vote_account_path = "/root/solana/vote-account-keypair.json"
 
 [rpc]
     port = 8899
@@ -37,7 +37,7 @@ dynamic_port_range = "8004-8020"
 
 [ledger]
     path = "/mnt/ledger"
-    accounts_path = "/mnt/disk1/accounts"
+    accounts_path = "/mnt/accounts"
     limit_size = 50000000
 	
 [snapshots]

@@ -8,22 +8,22 @@ source $HOME/.cargo/env
 ```
 ```bash
 echo "alias logs='tail -f /var/log/dancer/solana.log'" >> $HOME/.bashrc
-echo "alias monitor='agave-validator -l /home/dancer/ledger monitor'" >> $HOME/.bashrc
+echo "alias monitor='agave-validator -l /mnt/ledger monitor'" >> $HOME/.bashrc
 export PATH="$HOME/firedancer/build/native/gcc/bin/:$PATH"
 echo 'export PATH='$PATH >> ~/.bashrc
 source ~/.bashrc
-mkdir -p /mnt/disk1/accounts /mnt/ledger /mnt/snapshots /var/log/dancer /root/solana
-ln -sf /mnt/ledger /root/solana/ledger
+rm -rf /mnt/accounts /mnt/ledger 
+mkdir -p /mnt/accounts /mnt/ledger /mnt/snapshots /var/log/dancer /root/solana
 # chown -R root:root /mnt /var/log/dancer
 chmod -R u=rwx,g=rwx /mnt /var/log/dancer /root/solana
-curl https://raw.githubusercontent.com/Hohlas/solana/main/firedancer/dance_config.toml > /root/solana/dance_config.toml
-curl https://raw.githubusercontent.com/Hohlas/solana/main/firedancer/dancer.service > /root/solana/dancer.service
+curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/firedancer/dance_config.toml > /root/solana/dance_config.toml
+curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/firedancer/dancer.service > /root/solana/dancer.service
 ln -sf /root/solana/dancer.service /etc/systemd/system
 systemctl daemon-reload
 systemctl enable dancer.service
 systemctl disable solana.service
 # LogRotate #
-curl https://raw.githubusercontent.com/Hohlas/solana/main/firedancer/dancer.logrotate > /etc/logrotate.d/dancer.logrotate
+curl https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/firedancer/dancer.logrotate > /etc/logrotate.d/dancer.logrotate
 systemctl restart logrotate
 ```
 ```bash
@@ -48,7 +48,7 @@ make -j fdctl solana
 copy 'vote.json' & 'validator-keypair.json' to /root/solana/ 
 ```bash
 chmod -R u=rwx,g=rwx /root /root/solana /mnt
-chmod 600 /root/solana/vote.json /root/solana/validator-keypair.json
+chmod 600 /root/solana/vote-account-keypair.json /root/solana/validator-keypair.json
 ```
 ```bash
 systemctl restart dancer

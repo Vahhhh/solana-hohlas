@@ -42,6 +42,7 @@ chmod -R u=rwx,g=rwx /root /root/solana /mnt
 chmod 600 /root/solana/vote-account-keypair.json /root/solana/validator-keypair.json
 ```
 ```bash
+systemctl stop solana.service
 rm -rf /mnt/accounts /mnt/ledger 
 mkdir -p /mnt/accounts /mnt/ledger /mnt/snapshots /var/log/dancer /root/solana
 # chown -R root:root /mnt /var/log/dancer
@@ -52,7 +53,6 @@ ln -sf /root/solana/dancer.service /etc/systemd/system
 systemctl daemon-reload
 
 systemctl enable dancer.service
-systemctl stop solana.service
 
 systemctl restart dancer
 journalctl -u dancer -f

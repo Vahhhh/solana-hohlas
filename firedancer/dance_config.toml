@@ -24,6 +24,7 @@ dynamic_port_range = "8004-8020"
     port = 8899
     full_api = true
     private = true
+    only_known = false
 
 [layout]
 	affinity = "auto"

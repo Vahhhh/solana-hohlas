@@ -59,7 +59,7 @@ git submodule update --init --recursive
 
 [JitoGit](https://github.com/jito-foundation/jito-solana/releases) | [AgaveGit](https://github.com/anza-xyz/agave/releases)
 ```bash
-TAG1=v2.0.18-jito
+TAG1=v2.1.18-jito
 ```
 
 ```bash

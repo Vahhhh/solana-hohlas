@@ -71,7 +71,6 @@ FILES=(
     "core/src/replay_stage.rs"
     "core/src/vote_simulator.rs"
     "programs/vote/src/vote_state/mod.rs"
-    "sdk/program/src/vote/state/mod.rs"
 )
 echo -e "\n  - TAGs $BLUE$TAG$CLEAR & $BLUE$TAG1$CLEAR differences - "
 for FILE in "${FILES[@]}"; do
@@ -100,7 +99,6 @@ curl -o $REPO_DIR/core/src/consensus/fork_choice.rs https://raw.githubuserconten
 curl -o $REPO_DIR/core/src/replay_stage.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/replay_stage.rs
 curl -o $REPO_DIR/core/src/vote_simulator.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/vote_simulator.rs
 curl -o $REPO_DIR/programs/vote/src/vote_state/mod.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/mod.rs
-curl -o $REPO_DIR/sdk/program/src/vote/state/mod.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/mod_sdk.rs
 curl -o $HOME/solana/mostly_confirmed_threshold https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.1/mostly_confirmed_threshold
 echo -e "replace files for \033[32m V2.2.x \033[0m versions "
 ```

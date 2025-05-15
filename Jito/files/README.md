@@ -59,7 +59,7 @@ git submodule update --init --recursive
 
 [JitoGit](https://github.com/jito-foundation/jito-solana/releases) | [AgaveGit](https://github.com/anza-xyz/agave/releases)
 ```bash
-TAG1=v2.1.18-jito
+TAG1=v2.2.14-jito
 ```
 
 ```bash
@@ -90,6 +90,19 @@ done
 
 <details>
 <summary> Update files </summary>
+### v2.2.xx
+```bash
+
+curl -o $REPO_DIR/core/src/consensus.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/consensus.rs
+curl -o $REPO_DIR/core/src/consensus/progress_map.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/progress_map.rs
+curl -o $REPO_DIR/core/src/consensus/fork_choice.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/fork_choice.rs
+curl -o $REPO_DIR/core/src/replay_stage.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/replay_stage.rs
+curl -o $REPO_DIR/core/src/vote_simulator.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/vote_simulator.rs
+curl -o $REPO_DIR/programs/vote/src/vote_state/mod.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/mod.rs
+curl -o $REPO_DIR/sdk/program/src/vote/state/mod.rs https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.2/mod_sdk.rs
+curl -o $HOME/solana/mostly_confirmed_threshold https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.1/mostly_confirmed_threshold
+echo -e "replace files for \033[32m V2.2.x \033[0m versions "
+```
 
 ### v2.1.xx
 ```bash

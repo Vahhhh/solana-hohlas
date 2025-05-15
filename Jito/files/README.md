@@ -90,6 +90,7 @@ done
 
 <details>
 <summary> Update files </summary>
+
 ### v2.2.xx
 ```bash
 
@@ -103,6 +104,7 @@ curl -o $REPO_DIR/sdk/program/src/vote/state/mod.rs https://raw.githubuserconten
 curl -o $HOME/solana/mostly_confirmed_threshold https://raw.githubusercontent.com/Vahhhh/solana-hohlas/main/Jito/files/v2.1/mostly_confirmed_threshold
 echo -e "replace files for \033[32m V2.2.x \033[0m versions "
 ```
+
 
 ### v2.1.xx
 ```bash
@@ -131,9 +133,10 @@ curl -o $REPO_DIR/sdk/program/src/vote/state/mod.rs https://raw.githubuserconten
 curl -o $HOME/solana/mostly_confirmed_threshold https://raw.githubusercontent.com/Hohlas/solana/main/Jito/files/v2.0/mostly_confirmed_threshold
 echo -e "replace files for \033[32m V2.0.x \033[0m versions "
 ```
----
 
 </details>
+
+---
 
 ```bash
 cd $REPO_DIR;

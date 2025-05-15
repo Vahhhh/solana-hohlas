@@ -43,7 +43,7 @@ git fetch --tags # для загрузки всех тегов из удален
 ```
 
 ```bash
-TAG=v2.1.21-jito
+TAG=v2.2.14-jito
 # TAG=$(git describe --tags `git rev-list --tags --max-count=1`) # get last TAG
 ```
 
@@ -59,7 +59,7 @@ git submodule update --init --recursive
 
 [JitoGit](https://github.com/jito-foundation/jito-solana/releases) | [AgaveGit](https://github.com/anza-xyz/agave/releases)
 ```bash
-TAG1=v2.2.14-jito
+TAG1=v2.1.21-jito
 ```
 
 ```bash
